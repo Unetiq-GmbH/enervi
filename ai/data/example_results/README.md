@@ -1,0 +1,1 @@
+Generated images and intermediate results will be saved here when choosing to cache your results or running the demo scripts. Or set the desired path in ```src/data/config.py```.

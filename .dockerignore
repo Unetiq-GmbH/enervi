@@ -1,0 +1,7 @@
+.next
+.vscode
+.gitignore
+README.md
+.dockerignore
+.git
+package-lock.json

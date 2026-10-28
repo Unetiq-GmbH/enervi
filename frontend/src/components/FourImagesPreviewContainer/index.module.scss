@@ -1,0 +1,97 @@
+.container {
+  margin-bottom: 80px;
+}
+
+.generatedImage {
+  background: var(--secondary-color-lighter);
+  border: 1px dashed var(--border-drop-color);
+
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 432px;
+  position: relative;
+  overflow: hidden;
+
+  &.images {
+    background: none;
+    border: none;
+  }
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  animation: rotate 1.3s linear infinite;
+  margin-bottom: 24px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.description {
+  color: var(--description-color);
+}
+
+.errorText {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fourImagesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-radius: 12px;
+  gap: 12px;
+
+  .imagePlaceholder {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+    .downloadButton {
+      position: absolute;
+      bottom: 10px;
+      left: 0%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}

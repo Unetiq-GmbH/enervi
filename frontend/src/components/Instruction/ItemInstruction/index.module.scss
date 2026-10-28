@@ -1,0 +1,49 @@
+.item {
+  min-width: 280px;
+  padding: 24px;
+  gap: 32px;
+  border-radius: 12px;
+  background: var(--primary-color-light);
+  display: flex;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+.numberBox {
+  min-width: 48px;
+  height: 48px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-width: 42px;
+    height: 42px;
+  }
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    h5,
+    p {
+      font-size: 14px;
+    }
+
+    h5 {
+      line-height: 24.2px;
+    }
+
+    p {
+      line-height: 16.94px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.editIcon {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+}

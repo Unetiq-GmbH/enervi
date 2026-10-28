@@ -1,0 +1,37 @@
+.mapContainer {
+  height: 100vh;
+  position: relative;
+}
+
+.closeButton {
+  z-index: 1000;
+  position: absolute;
+  top: 28px;
+  right: 12px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 4.61px 0px #00000040;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  font-size: 20px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    top: 68px;
+    right: 8px;
+  }
+}

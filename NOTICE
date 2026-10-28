@@ -1,0 +1,25 @@
+EnerVi
+Copyright 2026 Unetiq GmbH
+
+This work was funded by the German Federal Ministry for Economic Affairs and Energy (BMWE) under grant 03EI5247C (project EnerVi).
+
+The source code in this repository is licensed under the Apache License, Version 2.0. See the LICENSE file.
+
+Pretrained model weights are not included. The image pipeline can download the models named below. Their licenses are separate from this repository and can add use restrictions. Confirm the current model card before downloading or redistributing weights.
+
+- ShilongLiu/GroundingDINO (IDEA-Research GroundingDINO) — Apache-2.0
+- Segment Anything, checkpoint sam_vit_b_01ec64.pth (Meta) — Apache-2.0
+- stabilityai/stable-diffusion-xl-base-1.0 — CreativeML Open RAIL++-M
+- stabilityai/stable-diffusion-2-inpainting — CreativeML Open RAIL++-M
+- stabilityai/stable-diffusion-xl-refiner-1.0 — CreativeML Open RAIL++-M
+- runwayml/stable-diffusion-inpainting — CreativeML Open RAIL-M
+- diffusers/controlnet-canny-sdxl-1.0 — CreativeML Open RAIL++-M
+- madebyollin/sdxl-vae-fp16-fix — MIT, derived from the SDXL VAE
+- Salesforce BLIP image captioning (the "blip-base" caption model) — BSD-3-Clause
+- OpenCLIP ViT-H-14 / laion2b_s32b_b79k — MIT
+
+UI
+
+- frontend/src/assets/icons/mingcute_down-line.svg is from MingCute (https://github.com/Richard9394/MingCute), Apache-2.0.
+
+Scenario thumbnails, page backgrounds, and city icons shipped here are plain generated placeholders, not photographs.

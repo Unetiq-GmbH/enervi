@@ -1,0 +1,73 @@
+.button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 100px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+    background-color: var(--button-disabled-color);
+    color: var(--button-disabled-color-text);
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px 24px;
+  }
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  @media (max-width: 768px) {
+    padding: 8px 24px;
+  }
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.tertiary {
+  background-color: var(--white-color);
+  color: var(--black-color);
+
+  @media (max-width: 768px) {
+    padding: 8px 24px;
+  }
+}
+
+.error {
+  background-color: var(--error-color);
+  color: var(--white-color);
+}
+
+.cancel {
+  background-color: var(--secondary-color-light);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,82 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  position: relative;
+
+  @media (max-width: 768px) {
+    height: auto;
+    margin-top: 100px;
+  }
+}
+
+.notFoundImage {
+  width: 100%;
+  max-width: 1177.78px;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    min-width: 280px;
+    margin-top: 38px;
+  }
+}
+
+.errorCode {
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.pageNotFound {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 77.45px;
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38.73px;
+    margin-bottom: 12px;
+  }
+}
+
+.message {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--description-color);
+  margin-bottom: 48px;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 19.36px;
+    max-width: 280px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  button {
+    padding: 12px 24px;
+  }
+}

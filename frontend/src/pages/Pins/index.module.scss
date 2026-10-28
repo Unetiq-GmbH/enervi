@@ -1,0 +1,59 @@
+.container {
+  margin-top: 83px;
+
+  @media (max-width: 768px) {
+    margin-top: 34px;
+  }
+}
+
+.manage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  p {
+    color: var(--title-color);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 16px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+
+  @media (max-width: 960px) {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+}
+
+.pins {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.mapContainer {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  width: 648px;
+  height: 684px;
+  margin-left: auto;
+
+  @media (max-width: 960px) {
+    max-width: calc(100% - 16px);
+    height: 217px;
+    margin: 0 auto;
+  }
+}

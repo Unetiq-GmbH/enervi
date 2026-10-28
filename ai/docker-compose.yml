@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  gpu_server:
+    image: enervi-image
+    container_name: gpu_server
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - enervi-volume:/app/models/
+    environment:
+      - STARTUP_SERVER_URL=${STARTUP_SERVER_URL:-}
+      - SEGMIND_API_KEY=${SEGMIND_API_KEY:-}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+volumes:
+  enervi-volume:
+    name: enervi-volume

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Replace 'YourFontName' with the actual font name */
+        }
+
+        .center-content {
+            text-align: center; /* Center text elements horizontally */
+            margin: 0 auto; /* Center block elements horizontally */
+            display: flex; /* Center block elements vertically */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 100vh; /* Ensure full viewport height for vertical centering */
+        }
+    </style>
+    <title>EnerVi</title>
+<!--    https://www.flaticon.com/free-icon/sprout_2556889-->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+
+<body>
+
+<div class="center-content">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="enerVi Logo" height="240px">
+    <br><br>
+
+
+    <form id="enerviForm" method="post" enctype="multipart/form-data">
+        <div style="display: flex; align-items: flex-start;">
+            <div style="flex: 1;">
+                <input type="file" name="image" accept="image/*" required>
+            </div>
+
+            <div style="flex: 1; margin-left: 20px;">
+                <div>
+                    <label for="visualization">Visualization</label>
+                    <select name="visualization" id="visualization" required>
+                        <option value="solar">Solar</option>
+                        <option value="wind">Wind</option>
+                        <option value="vegetation">Vegetation</option>
+                        <option value="flood">Flood</option>
+                        <option value="utopia">Utopia</option>
+                        <option value="dystopia">Dystopia</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="prompt">Prompt</label>
+                    <select name="prompt" id="prompt" required>
+                        <option value="automatic">Automatic</option>
+                        <option value="static">Static</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br><br><br>
+
+        <label for="cache">Cache Results</label>
+        <input type="checkbox" name="cache" id="cache" checked>
+        <p style="font-size: 10px;">Save intermediate results to disk.</p>
+        <br>
+
+        <label for="test_mode">Test Mode</label>
+        <input type="checkbox" name="test_mode" id="test_mode">
+        <p style="font-size: 10px;">Enables local inference for testing purposes <br>by using a smaller model and a
+            low number of inference
+            steps.</p>
+
+        <br><br>
+        <input type="submit" formaction="/enervi/api/dev" value="Test flask route">
+
+    </form>
+</div>
+
+
+<!-- Choose the route for visualization based on the user selection -->
+<script>
+    document.getElementById("enerviForm").addEventListener("submit", function () {
+        var visualize = document.getElementById("visualization").value;
+        this.action = "/enervi/api/" + visualize;
+    });
+
+    <!-- Enforce automatic prompt inference for utopian/dystopian scenarios-->
+    const visualizationSelect = document.getElementById("visualization");
+    const promptSelect = document.getElementById("prompt");
+
+    visualizationSelect.addEventListener("change", function () {
+        if (visualizationSelect.value === "utopia" || visualizationSelect.value === "dystopia") {
+            // Disable the 'static' option and select 'automatic'
+            promptSelect.querySelector('option[value="static"]').disabled = true;
+            promptSelect.value = "automatic";
+        } else {
+            // Enable the 'static' option
+            promptSelect.querySelector('option[value="static"]').disabled = false;
+        }
+    });
+
+    <!-- Disable test mode for utopian/dystopian-->
+    const modeCheck = document.getElementById("test_mode");
+
+    visualizationSelect.addEventListener("change", function () {
+        if (visualizationSelect.value === "utopia" || visualizationSelect.value === "dystopia") {
+            modeCheck.disabled = true;
+            modeCheck.checked = false;
+        } else {
+            modeCheck.disabled = false;
+        }
+    });
+</script>
+
+</body>
+</html>

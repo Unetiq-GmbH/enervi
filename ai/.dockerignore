@@ -1,0 +1,12 @@
+dockerfile
+data/
+!data/example_results/README.md
+models/*
+!models/README.md
+venv/
+.next
+.vscode
+README.md
+.dockerignore
+.git
+.idea/

@@ -1,0 +1,79 @@
+{
+  "solar": {
+    "object": [
+      "roof"
+    ],
+    "negative_prompt": "window",
+    "prompt": {
+      "inpainting": "house with solar panels++ on roof, high quality, detailed, realistic",
+      "pix2pix": "put solar panels on roof of house",
+      "sdxl": "house with (solar panels)1.8 on roofs, high quality, detailed, realistic"
+    },
+    "injection": "(solar panels)1.4 on roof",
+    "grounding_phrase": "solar panels on roof"
+  },
+  "vegetation": {
+    "object": [
+      "tree",
+      "plant",
+      "vegetation"
+    ],
+    "negative_prompt": "green",
+    "prompt": {
+      "inpainting": "house with dried++ out, withered plants++ and trees++ in extreme heat, high quality, detailed, realistic",
+      "pix2pix": "make trees look dried out, brown, withered",
+      "sdxl": "dry, wilted, shriveled plants in extreme heat, (brown)1.4, high quality, detailed, realistic, 8k"
+    },
+    "injection": "(dry, bare, leafless plants and trees)1.4",
+    "grounding_phrase": "withered, brown plants"
+  },
+  "wind": {
+    "object": [
+      "field"
+    ],
+    "negative_prompt": "",
+    "prompt": {
+      "inpainting": "wind turbines on a field, high quality, intricate detail, realistic, natural",
+      "pix2pix": "put wind turbines++ on the field",
+      "sdxl": "(wind turbines)1.4 on a field, high quality, intricate detail, realistic, natural"
+    },
+    "injection": "(wind turbines)1.4 on field",
+    "grounding_phrase": "wind turbine"
+  },
+  "flux_wind": {
+    "object": [
+      "field"
+    ],
+    "negative_prompt": "",
+    "prompt": {
+      "inpainting": "wind turbines on a field, high quality, intricate detail, realistic, natural",
+      "pix2pix": "put wind turbines++ on the field",
+      "sdxl": "(wind turbines)1.4 on a field, high quality, intricate detail, realistic, natural"
+    },
+    "injection": "(wind turbines)1.4 on field",
+    "grounding_phrase": "wind turbine"
+  },
+  "flood": {
+    "object": [
+      "road",
+      "field",
+      "grass"
+    ],
+    "negative_prompt": "",
+    "prompt": {
+      "sdxl": "photograph of (flooded)1.4 roads, fields, heavy rain, high quality, detailed, realistic"
+    },
+    "injection": "(flooded)1.4, heavy rain"
+  },
+  "utopia": {
+    "negative_prompt": "car, dust, brown",
+    "injection": "solar punk, trees, meadow, natural pond, solar panels and plants on buildings, environment-friendly, sustainable, futuristic, bright"
+  },
+  "dystopia": {
+    "negative_prompt": "green, trees",
+    "injection": "urban dystopia, bare, leafless plants and trees, roads, extreme heat, pollution, smog, industrial"
+  },
+  "custom_prompt": {
+    "negative_prompt": null
+  }
+}

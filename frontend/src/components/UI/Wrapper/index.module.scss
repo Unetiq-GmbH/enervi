@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 0px 60px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0px 8px;
+  }
+}

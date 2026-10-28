@@ -1,0 +1,1 @@
+Put your testing images here or set path to your images in ```src/data/config.py```.

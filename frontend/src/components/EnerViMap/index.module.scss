@@ -1,0 +1,76 @@
+.container {
+  margin: 0 auto;
+  background: url("../../assets/background/back2912.jpg") no-repeat center
+    center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 422px;
+
+  @media (max-width: 1080px) {
+    background: url("../../assets/background/back1440.jpg") no-repeat center
+      center;
+  background-size: cover;
+
+  }
+
+  @media (max-width: 768px) {
+    background-size: 1500px;
+    background-position-y: -8px;
+    background-position-x: -330px;
+    margin-bottom: 120px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+}
+
+.mapContainer {
+  max-width: calc(1440px - 120px);
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  width: 100%;
+  position: absolute;
+  bottom: -345px;
+  height: 720px;
+
+  @media (max-width: 1440px) {
+    max-width: calc(100% - 120px);
+  }
+
+  @media (max-width: 768px) {
+    max-width: calc(100% - 16px);
+    bottom: -100px;
+    height: 217px;
+  }
+}
+
+.leaflet-container {
+  height: inherit !important;
+}
+
+.leafletMap {
+  border-radius: 12px;
+  height: inherit !important;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--description-color);
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--white-color);
+  }
+}

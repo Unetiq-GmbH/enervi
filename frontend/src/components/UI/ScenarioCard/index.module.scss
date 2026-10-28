@@ -1,0 +1,49 @@
+.card {
+  height: 128px;
+  border-radius: 16px;
+  background-color: var(--white-color);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-weight: 500;
+  color: var(--white-color);
+  line-height: 24px;
+  z-index: 2;
+}
+
+.dimmed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000099;
+  z-index: 1;
+}

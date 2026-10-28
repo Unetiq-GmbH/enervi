@@ -1,0 +1,1 @@
+The docker volume will be mounted here as the model cache.

@@ -1,0 +1,71 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  width: 480px;
+  height: 233px;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  border: 1px solid var(--border-modal-color);
+  padding: 24px;
+  box-shadow: var(--modal-shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--modal-description-color);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0 52px;
+  align-items: flex-end;
+
+  p {
+    font-size: 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    h3,
+    p {
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      line-height: 19.36px;
+    }
+  }
+}
+
+.info p {
+  color: var(--description-color);
+}

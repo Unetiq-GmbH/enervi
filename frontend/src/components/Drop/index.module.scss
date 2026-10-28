@@ -1,0 +1,73 @@
+.dropZone {
+  background: var(--secondary-color-lighter);
+  border-radius: 12px;
+  border: 1px dashed var(--border-drop-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.icon {
+  margin-top: 24px;
+}
+
+.text {
+  margin-top: 24px;
+  font-size: 16px;
+  color: var(----description-color);
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.webcamContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 8px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.centerButtonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

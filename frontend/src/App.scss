@@ -1,0 +1,90 @@
+@use "./styles/variables" as *;
+@use "./styles/scrollbar" as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $default-color;
+  font-family: $default-font;
+  font-optical-sizing: auto;
+  font-size: $default-font-size;
+  font-style: normal;
+  font-weight: $default-font-weight;
+  letter-spacing: $default-letter-spacing;
+  line-height: $default-line-height;
+  margin: 0;
+}
+
+.leaflet-container {
+  height: 100vh;
+  z-index: 1;
+}
+
+a {
+  all: unset;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: 60px;
+  line-height: 72px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 1px;
+    word-break: break-word;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.5px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0.5px;
+  }
+}
+
+h4 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.6px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 29.05px;
+  }
+}
+
+h5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h6 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+p {
+  margin: 0;
+}

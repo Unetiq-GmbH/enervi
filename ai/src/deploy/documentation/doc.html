@@ -1,0 +1,54 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <title>Swagger UI</title>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui.css" >
+          <style>
+            html
+            {
+              box-sizing: border-box;
+              overflow-x: hidden;
+              overflow-y: scroll;
+            }
+            *,
+            *:before,
+            *:after
+            {
+              box-sizing: inherit;
+            }
+            body {
+              margin:0;
+              background: #fafafa;
+            }
+          </style>
+        </head>
+        <body>
+        <div id="swagger-ui"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-bundle.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.24.2/swagger-ui-standalone-preset.js"> </script>
+        <script>
+        window.onload = function() {
+          var spec = {"swagger": "2.0", "basePath": "/enervi", "paths": {"/api/health-check": {"get": {"responses": {"200": {"description": "Success"}}, "summary": "Check if the API is running", "description": "Check if the API is running.", "operationId": "get_health_check_/api/health-check", "tags": ["api"]}}, "/api/test": {"get": {"responses": {"200": {"description": "Success"}}, "summary": "Test the image editing route with an HTML form", "description": "Test the image editing route with an HTML form.", "operationId": "get_test_html_/api/test", "tags": ["api"]}}, "/api/{visualize}": {"parameters": [{"description": "Visualization options", "enum": ["solar", "wind", "vegetation", "flood", "utopia", "dystopia", "dev"], "default": "dev", "name": "visualize", "in": "path", "required": true, "type": "string"}], "post": {"responses": {"200": {"description": "Success", "schema": {"$ref": "#/definitions/JSONResponse"}}}, "summary": "Edit an image", "description": "Edit an image.\n\nInpainting functionalities: ['solar', 'wind', 'vegetation', 'flood']\nControlNet functionalities: ['utopia', 'dystopia']\nDev mode (returns the input image without processing): dev", "operationId": "post_edit_image_/api/<visualize>", "parameters": [{"name": "payload", "required": true, "in": "body", "schema": {"$ref": "#/definitions/JSONorFormRequest"}}], "tags": ["api"]}}}, "info": {"title": "EnerVi API", "version": "0.1", "description": "Visualization of the energy transformation and consequences of climate crisis."}, "produces": ["application/json"], "consumes": ["application/json"], "tags": [{"name": "api", "description": "EnerVi operations"}], "definitions": {"JSONorFormRequest": {"required": ["image"], "properties": {"image": {"type": "string", "description": "Base64-encoded image data"}}, "type": "object"}, "JSONResponse": {"required": ["edited_image"], "properties": {"edited_image": {"type": "string", "description": "Base64-encoded image data"}}, "type": "object"}}, "responses": {"ParseError": {"description": "When a mask can't be parsed"}, "MaskError": {"description": "When any error occurs on mask"}}};
+          // Build a system
+          const ui = SwaggerUIBundle({
+            spec: spec,
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            presets: [
+              SwaggerUIBundle.presets.apis,
+              SwaggerUIStandalonePreset
+            ],
+            plugins: [
+              SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout"
+          })
+          window.ui = ui
+        }
+        </script>
+        </body>
+        </html>
+        

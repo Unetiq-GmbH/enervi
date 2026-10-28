@@ -1,0 +1,92 @@
+.switcher {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 12px;
+  background: var(--white-color);
+  box-shadow: var(--switch-shadow);
+  z-index: 1000;
+
+  & .city {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      opacity 0.3s ease;
+    width: 143px;
+
+    &.selected {
+      background: var(--secondary-color-lighter);
+      opacity: 1;
+    }
+
+    &.selected img {
+      border-radius: 4px;
+    }
+
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+
+    & span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    &:not(.selected) {
+      background: transparent;
+    }
+
+    &:hover {
+      background: var(--hover-color);
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    bottom: 112px;
+  }
+}
+
+.buttonContainer {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+  }
+}
+
+.mapPage {
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    & .city {
+      width: 263px;
+
+      & img {
+        width: 32px;
+        height: 32px;
+      }
+
+      & span {
+        font-weight: 400;
+      }
+    }
+  }
+}

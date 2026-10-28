@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  margin-top: 50px;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 90px;
+    padding: 0;
+  }
+}
+
+.containerDrop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+  }
+}
+
+.start {
+  margin-bottom: 12px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.description {
+  margin-bottom: 32px;
+  color: var(--description-color);
+
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.descriptionScenario {
+  color: var(--description-color);
+}
+
+.wrapperDrop {
+  height: 360px;
+  width: 536px;
+
+  @media (max-width: 1024px) {
+    height: 238px;
+    width: 100%;
+    max-width: 359px;
+  }
+}
+
+.containerScenario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    button {
+      width: -webkit-fill-available;
+    }
+    align-items: center;
+    max-width: 359px;
+  }
+}
+
+.containerOptional {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+    & > * {
+      width: 240px;
+    }
+  }
+}
+
+.error {
+  color: var(--error-color);
+}
